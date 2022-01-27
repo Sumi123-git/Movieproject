@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD-MOVIE</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+    <input type="text" name="name" placeholder="moviename"><br>
+    <input type="text" name="year" placeholder="year"><br>
+    <input type="text" name="desc" placeholder="description"><br>
+    <input type="file" name="img"><br>
+    <input type="submit">
+</form>
+{% endblock %}
+</body>
+</html>
